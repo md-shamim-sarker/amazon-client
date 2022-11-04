@@ -1,3 +1,8 @@
+.App {
+    width: 75%;
+    margin: auto;
+}
+
 table {
     border: 1px solid #9a9494;
     border-collapse: collapse;

@@ -12,7 +12,6 @@ const UpdateData = () => {
         const quantity = form.quantity.value;
         const price = form.price.value;
         const products = {title, quantity, price};
-        console.log(products);
 
         // Update Operation
         fetch(`http://localhost:5000/product/${_id}`, {
@@ -23,6 +22,7 @@ const UpdateData = () => {
             body: JSON.stringify(products)
         }).then(() => {
             navigate("/");
+            console.log("A data updated successfully!!!");
         }).catch((error) => {
             console.log(error);
         });

@@ -9,7 +9,6 @@ const InsertData = () => {
         const quantity = form.quantity.value;
         const price = form.price.value;
         const products = {title, quantity, price};
-        console.log(products);
 
         // Create Operation
         fetch('http://localhost:5000/products', {
@@ -18,6 +17,8 @@ const InsertData = () => {
                 'content-type': 'application/json'
             },
             body: JSON.stringify(products)
+        }).then(() => {
+            console.log("A data added successfully!!!");
         }).catch((error) => {
             console.log(error);
         });
