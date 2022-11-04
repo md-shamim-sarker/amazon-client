@@ -11,6 +11,7 @@ const InsertData = () => {
         const products = {title, quantity, price};
         console.log(products);
 
+        // Create Operation
         fetch('http://localhost:5000/products', {
             method: 'POST',
             headers: {
