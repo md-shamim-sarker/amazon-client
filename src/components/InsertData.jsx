@@ -8,9 +8,21 @@ const InsertData = () => {
         const title = form.title.value;
         const quantity = form.quantity.value;
         const price = form.price.value;
-        console.log(title, quantity, price);
+        const products = {title, quantity, price};
+        console.log(products);
+
+        fetch('http://localhost:5000/products', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(products)
+        }).catch((error) => {
+            console.log(error);
+        });
         form.reset();
     };
+
     return (
         <div>
             <h2>Add Products</h2>

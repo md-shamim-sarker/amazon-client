@@ -1,7 +1,8 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const Data = ({index, product}) => {
-    const {title, quantity, price} = product;
+    const {_id, title, quantity, price} = product;
     return (
         <tbody>
             <tr>
@@ -9,7 +10,11 @@ const Data = ({index, product}) => {
                 <td>{title}</td>
                 <td>{quantity}</td>
                 <td>{price}</td>
-                <td><button>Update</button></td>
+                <td>
+                    <Link to={`/update/${_id}`}>
+                        <button>Update</button>
+                    </Link>
+                </td>
                 <td><button>Delete</button></td>
             </tr>
         </tbody>
