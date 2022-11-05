@@ -1,3 +1,4 @@
+// router.jsx
 import {createBrowserRouter} from "react-router-dom";
 import DisplayData from "../components/DisplayData";
 import InsertData from "../components/InsertData";

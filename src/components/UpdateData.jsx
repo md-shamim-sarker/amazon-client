@@ -1,3 +1,4 @@
+// UpdateData.jsx
 import React from 'react';
 import {Link, useLoaderData, useNavigate} from 'react-router-dom';
 
